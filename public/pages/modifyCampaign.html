@@ -1,0 +1,30 @@
+<div class="container" ng-controller="AddCampaignController">
+	<div class="col-xs-12 text-center">
+		<h1>Modify A Campaign</h1>
+	</div>
+	<div class="col-xs-offset-1 col-xs-10">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Company Name</th>
+					<th>Piece Name</th>
+					<th>Frequency</th>
+					<th>Day</th>
+					<th>Action</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in campaign">
+					<td>{{item.company}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.frequency}}</td>
+					<td>{{item.day}}</td>
+					<td><button class="btn btn-danger" ng-click="remove(item._id)">Remove</button></td>
+					<td><button class="btn btn-warning" ng-click="edit(item._id)">Edit</button></td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
